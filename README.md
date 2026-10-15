@@ -1,6 +1,6 @@
 # Portfolio Hub
 
-独立的个人作品入口，连接 Odyssey、AI 治理研究与 River。当前为本地初版，尚未发布。
+独立的个人作品入口，连接 Odyssey、AI 治理研究与 River。使用 GitHub Pages 托管。
 
 ## 本地运行
 
@@ -26,10 +26,10 @@ npm run preview
 - Vite + TypeScript + 原生 CSS，无后端，无外部字体请求。
 - `src/data/projects.ts`：全部项目资料、个人简介和联系方式；缺失链接的内部备注不会渲染。
 - `src/main.ts`：Home、Work、About、Contact，使用 hash 导航以适配静态托管和直接刷新。
-- `src/styles.css`：黑白灰、低饱和橄榄灰强调色、系统衬线标题与无衬线正文、响应式布局和减少动态效果支持。
+- `src/styles.css`：参考 Figma「THE ATLAS」的蓝灰配色、无衬线大标题、双列作品卡片，支持手机布局和减少动态效果。
 - `docs/`：架构、初始化说明与进度；协作规则见 `AGENTS.md`。
 
-目前使用简短中文草稿，身份名称暂为 Portfolio Hub。较长中文文稿经用户确认后再转为英文，届时同步修改 HTML 的 `lang`、描述与可访问性标签。
+首页使用用户提供 Figma 中的英文短文案，名称为 RIVER LIANG；详情页仍使用中文草稿。较长中文文稿经用户确认后再转为英文，届时同步修改 HTML 的 `lang`、描述与可访问性标签。首页英文区域单独标记 `lang="en"`。设计稿中的 FILMS 暂不展示，等待有可公开作品后再加入。
 
 ## GitHub Pages
 
@@ -39,7 +39,7 @@ npm run preview
 npm run build -- --base=/river-portfolio-hub/
 ```
 
-`.github/workflows/deploy.yml` 支持推送到 `main` 后自动部署，也支持手动触发，与相邻 Odyssey 仓库采用相同的 Pages 发布方式。仓库 Pages 的构建来源需要设为 GitHub Actions。当前仅已准备本地配置，尚未推送此次修改或运行部署工作流；公开访问状态尚未核实。
+`.github/workflows/deploy.yml` 支持推送到 `main` 后自动部署，也支持手动触发，与相邻 Odyssey 仓库采用相同的 Pages 发布方式。仓库 Pages 已启用，构建来源为 GitHub Actions。网站地址：https://riverliang008.github.io/river-portfolio-hub/ 。部署状态见仓库 Actions。
 
 ## 发布前仍需确认
 
