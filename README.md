@@ -36,10 +36,10 @@ npm run preview
 `vite.config.ts` 默认使用相对资源路径 `./`，支持仓库子目录和自定义域名。需要固定路径时运行：
 
 ```sh
-npm run build -- --base=/portfolioHub/
+npm run build -- --base=/river-portfolio-hub/
 ```
 
-`.github/workflows/deploy.yml` 仅支持手动触发。部署获批准后，将仓库 Pages 的构建来源设为 GitHub Actions，再手动运行工作流。当前未运行部署工作流、未部署；推送源码不会自动发布网站。
+`.github/workflows/deploy.yml` 支持推送到 `main` 后自动部署，也支持手动触发，与相邻 Odyssey 仓库采用相同的 Pages 发布方式。仓库 Pages 的构建来源需要设为 GitHub Actions。当前仅已准备本地配置，尚未推送此次修改或运行部署工作流；公开访问状态尚未核实。
 
 ## 发布前仍需确认
 

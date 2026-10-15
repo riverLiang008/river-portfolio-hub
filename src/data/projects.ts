@@ -35,7 +35,7 @@ export const projects: Project[] = [
 ];
 
 export const profile = {
-  name: 'Portfolio Hub',
+  name: 'RIVER LIANG',
   // 只填入经确认、可公开的个人信息与链接。
   bio: '',
   contacts: [] as { label: string; url: string }[],

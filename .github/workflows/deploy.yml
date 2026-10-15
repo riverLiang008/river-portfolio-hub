@@ -1,7 +1,8 @@
 name: Deploy portfolio to GitHub Pages
 
-# Manual trigger only: pushing source does not automatically publish this draft.
 on:
+  push:
+    branches: [main]
   workflow_dispatch:
 
 permissions:

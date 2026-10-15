@@ -17,21 +17,35 @@ function projectList() {
   </article>`).join('')}</div>`;
 }
 
+function projectCards() {
+  const cards = [
+    { category: 'DESIGN', title: 'ODYSSEY', subtitle: 'Human–AI collaboration' },
+    { category: 'SCIENCE', title: 'RESEARCH', subtitle: 'AI governance stability' },
+    { category: 'LITERATURE', title: 'RIVER', subtitle: 'Writing & ideas' },
+  ];
+  return `<div class="atlas-grid">${cards.map((card, i) => `<a class="atlas-card" href="#work/${projects[i].id}" aria-label="${card.title}: ${card.subtitle}"><span class="eyebrow">0${i + 1} / ${card.category}</span><span class="card-arrow" aria-hidden="true">↗</span><h2>${card.title}</h2><p>${card.subtitle}</p></a>`).join('')}</div>`;
+}
+
 function content(page: Page) {
-  if (page === 'home') return `<section class="hero"><p class="eyebrow">Research · Design · Writing</p><h1>系统、研究，<br>与文字之间。</h1><p class="intro">这里汇集 Odyssey、AI 治理研究与 River，<br class="desktop-break">连接设计实践、研究问题和写作。</p><a class="text-link" href="#work">浏览作品 <span aria-hidden="true">↗</span></a></section><section aria-labelledby="selected"><div class="section-heading"><h2 id="selected">Selected work</h2><span>01 — 03</span></div>${projectList()}</section>`;
+  if (page === 'home') return `<section class="hero" lang="en"><p class="eyebrow">02 / THE ATLAS</p><h1>Independent thinking.<br>Connected worlds.</h1><p class="intro">An evolving atlas of systems, ideas, and stories.</p></section><section aria-label="Selected work" lang="en">${projectCards()}</section>`;
   if (page === 'work') return `<section class="page-heading"><p class="eyebrow">Index / 01</p><h1>Work</h1><p class="intro">设计、研究与写作。</p></section><section aria-label="项目索引">${projectList()}</section>`;
   if (page === 'about') return `<section class="page-heading"><p class="eyebrow">Background / 02</p><h1>About</h1></section><section class="prose"><h2>关于我</h2><p>${profile.bio ? escape(profile.bio) : '个人简介正在整理。'}</p><p>你可以先从作品了解这里关注的主题：人机协作、AI 治理，以及文学与思想写作。</p><a class="text-link" href="#work">查看作品 <span aria-hidden="true">↗</span></a></section>`;
   return `<section class="page-heading"><p class="eyebrow">Correspondence / 03</p><h1>Contact</h1></section><section class="prose"><h2>保持联系</h2>${profile.contacts.length ? `<ul class="contact-list">${profile.contacts.map(c => `<li><a class="text-link" href="${escape(c.url)}">${escape(c.label)} ↗</a></li>`).join('')}</ul>` : '<p>联系方式整理后将在这里更新。</p>'}</section>`;
 }
 
 function render(focus = false) {
-  const hash = location.hash.slice(1);
+  const [hash, projectId] = location.hash.slice(1).split('/');
   const page: Page = pages.includes(hash as Page) ? hash as Page : 'home';
   document.title = `${labels[page]} — ${profile.name}`;
-  document.querySelector<HTMLDivElement>('#app')!.innerHTML = `<div class="shell"><header class="site-header"><a class="wordmark" href="#home">${escape(profile.name)}<span class="brand-dot" aria-hidden="true"></span></a><nav aria-label="主导航">${pages.map(p => `<a href="#${p}" ${p === page ? 'aria-current="page"' : ''}>${labels[p]}</a>`).join('')}</nav></header><main id="main" tabindex="-1">${content(page)}</main><footer><span>Research, design & the written word.</span><a href="#home">Portfolio Hub <span aria-hidden="true">↑</span></a></footer></div>`;
+  document.querySelector<HTMLDivElement>('#app')!.innerHTML = `<div class="shell"><header class="site-header"><a class="wordmark" href="#home">${escape(profile.name)}</a><nav aria-label="主导航">${pages.filter(p => p !== 'home').map(p => `<a href="#${p}" ${p === page ? 'aria-current="page"' : ''}>${labels[p]}</a>`).join('')}<span aria-hidden="true">↗</span></nav></header><main id="main" tabindex="-1">${content(page)}</main><footer lang="en"><span>INDEPENDENT WORK / 2026</span><a href="#work">EXPLORE THE COLLECTION <span aria-hidden="true">↗</span></a></footer></div>`;
   if (focus) {
     document.querySelector<HTMLElement>('#main')!.focus();
-    window.scrollTo(0, 0);
+    const target = page === 'work' && projectId ? document.getElementById(projectId) : null;
+    if (target) {
+      target.tabIndex = -1;
+      target.focus();
+      target.scrollIntoView({ block: 'start' });
+    } else window.scrollTo(0, 0);
   }
 }
 window.addEventListener('hashchange', () => {
