@@ -27,7 +27,7 @@ function projectCards() {
 }
 
 function content(page: Page) {
-  if (page === 'home') return `<section class="hero" lang="en"><p class="eyebrow">02 / THE ATLAS</p><h1>Independent thinking.<br>Connected worlds.</h1><p class="intro">An evolving atlas of systems, ideas, and stories.</p></section><section aria-label="Selected work" lang="en">${projectCards()}</section>`;
+  if (page === 'home') return `<section class="hero" lang="en"><h1>One thing leads to another.</h1><p class="intro">A collection of projects in technology, research, writing, and film.</p></section><section aria-label="Selected work" lang="en">${projectCards()}</section>`;
   if (page === 'work') return `<section class="page-heading"><p class="eyebrow">Index / 01</p><h1>Work</h1><p class="intro">设计、研究与写作。</p></section><section aria-label="项目索引">${projectList()}</section>`;
   if (page === 'about') return `<section class="page-heading"><p class="eyebrow">Background / 02</p><h1>About</h1></section><section class="prose"><h2>关于我</h2><p>${profile.bio ? escape(profile.bio) : '个人简介正在整理。'}</p><p>你可以先从作品了解这里关注的主题：人机协作、AI 治理，以及文学与思想写作。</p><a class="text-link" href="#work">查看作品 <span aria-hidden="true">↗</span></a></section>`;
   return `<section class="page-heading"><p class="eyebrow">Correspondence / 03</p><h1>Contact</h1></section><section class="prose"><h2>保持联系</h2>${profile.contacts.length ? `<ul class="contact-list">${profile.contacts.map(c => `<li><a class="text-link" href="${escape(c.url)}">${escape(c.label)} ↗</a></li>`).join('')}</ul>` : '<p>联系方式整理后将在这里更新。</p>'}</section>`;
