@@ -1,5 +1,5 @@
 import './styles.css';
-import { projects, profile } from './data/projects';
+import { projects, profile, links } from './data/projects';
 
 const pages = ['home', 'work', 'about', 'contact'] as const;
 type Page = typeof pages[number];
@@ -19,28 +19,29 @@ function projectList() {
 
 function projectCards() {
   const cards = [
-    { category: 'DESIGN', title: 'ODYSSEY', subtitle: 'Human–AI collaboration' },
-    { category: 'SCIENCE', title: 'RESEARCH', subtitle: 'AI governance stability' },
-    { category: 'LITERATURE', title: 'RIVER', subtitle: 'Writing & ideas' },
+    { category: 'DESIGN', title: 'ODYSSEY', subtitle: 'Human–AI collaboration', url: links.odyssey },
+    { category: 'SCIENCE', title: 'RESEARCH', subtitle: 'AI governance stability', url: links.research },
+    { category: 'LITERATURE', title: 'RIVER', subtitle: 'Writing & ideas', url: links.river },
+    { category: 'MEDIA', title: 'FILMS', subtitle: 'Visual essays', url: links.films },
   ];
-  return `<div class="atlas-grid">${cards.map((card, i) => `<a class="atlas-card" href="#work/${projects[i].id}" aria-label="${card.title}: ${card.subtitle}"><span class="eyebrow">0${i + 1} / ${card.category}</span><span class="card-arrow" aria-hidden="true">↗</span><h2>${card.title}</h2><p>${card.subtitle}</p></a>`).join('')}</div>`;
+  return `<div class="atlas-grid">${cards.map((card, i) => `<a class="atlas-card" href="${escape(card.url)}" target="_blank" rel="noopener noreferrer" aria-label="${card.title}: ${card.subtitle}"><span class="eyebrow">0${i + 1} / ${card.category}</span><span class="card-arrow" aria-hidden="true">↗</span><h2>${card.title}</h2><p>${card.subtitle}</p></a>`).join('')}</div>`;
 }
 
-function content(page: Page) {
-  if (page === 'home') return `<section class="hero" lang="en"><h1>One thing leads to another.</h1><p class="intro">A collection of projects in technology, research, writing, and film.</p></section><section aria-label="Selected work" lang="en">${projectCards()}</section>`;
+function content(page: Page): string {
+  if (page === 'home') return `<section class="hero" lang="en"><h1>One thing leads to another.</h1><p class="intro">A collection of projects in technology, research, writing, and film.</p></section><section aria-label="Selected work" lang="en">${projectCards()}</section>${content('about')}${content('contact')}`;
   if (page === 'work') return `<section class="page-heading"><p class="eyebrow">Index / 01</p><h1>Work</h1><p class="intro">设计、研究与写作。</p></section><section aria-label="项目索引">${projectList()}</section>`;
-  if (page === 'about') return `<section class="page-heading"><p class="eyebrow">Background / 02</p><h1>About</h1></section><section class="prose"><h2>关于我</h2><p>${profile.bio ? escape(profile.bio) : '个人简介正在整理。'}</p><p>你可以先从作品了解这里关注的主题：人机协作、AI 治理，以及文学与思想写作。</p><a class="text-link" href="#work">查看作品 <span aria-hidden="true">↗</span></a></section>`;
-  return `<section class="page-heading"><p class="eyebrow">Correspondence / 03</p><h1>Contact</h1></section><section class="prose"><h2>保持联系</h2>${profile.contacts.length ? `<ul class="contact-list">${profile.contacts.map(c => `<li><a class="text-link" href="${escape(c.url)}">${escape(c.label)} ↗</a></li>`).join('')}</ul>` : '<p>联系方式整理后将在这里更新。</p>'}</section>`;
+  if (page === 'about') return `<section id="about" class="home-section prose" lang="en" aria-labelledby="about-heading"><h2 id="about-heading">A little about me.</h2><p>I'm River, a software developer with a background in software engineering and information system. My interests span human–AI interaction, research, literature, and visual storytelling.</p><a class="text-link" href="${escape(links.linkedin)}" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></section>`;
+  return `<section id="contact" class="home-section prose" lang="en" aria-labelledby="contact-heading"><h2 id="contact-heading">Get in touch.</h2><p>For collaborations, research, or just a conversation.</p><a class="text-link" href="mailto:${escape(links.email)}">Email ↗</a></section>`;
 }
 
 function render(focus = false) {
   const [hash, projectId] = location.hash.slice(1).split('/');
   const page: Page = pages.includes(hash as Page) ? hash as Page : 'home';
   document.title = `${labels[page]} — ${profile.name}`;
-  document.querySelector<HTMLDivElement>('#app')!.innerHTML = `<div class="shell"><header class="site-header"><a class="wordmark" href="#home">${escape(profile.name)}</a><nav aria-label="主导航">${pages.filter(p => p !== 'home').map(p => `<a href="#${p}" ${p === page ? 'aria-current="page"' : ''}>${labels[p]}</a>`).join('')}<span aria-hidden="true">↗</span></nav></header><main id="main" tabindex="-1">${content(page)}</main><footer lang="en"><span>INDEPENDENT WORK / 2026</span><a href="#work">EXPLORE THE COLLECTION <span aria-hidden="true">↗</span></a></footer></div>`;
+  document.querySelector<HTMLDivElement>('#app')!.innerHTML = `<div class="shell"><header class="site-header"><a class="wordmark" href="#home">${escape(profile.name)}</a><nav aria-label="主导航">${pages.filter(p => p !== 'home').map(p => `<a href="#${p}" ${p === page ? 'aria-current="page"' : ''}>${labels[p]}</a>`).join('')}<span aria-hidden="true">↗</span></nav></header><main id="main" tabindex="-1">${content(page === 'about' || page === 'contact' ? 'home' : page)}</main><footer lang="en"><span>INDEPENDENT WORK / 2026</span><a href="#work">EXPLORE THE COLLECTION <span aria-hidden="true">↗</span></a></footer></div>`;
   if (focus) {
     document.querySelector<HTMLElement>('#main')!.focus();
-    const target = page === 'work' && projectId ? document.getElementById(projectId) : null;
+    const target = page === 'about' || page === 'contact' ? document.getElementById(page) : page === 'work' && projectId ? document.getElementById(projectId) : null;
     if (target) {
       target.tabIndex = -1;
       target.focus();
@@ -52,4 +53,4 @@ window.addEventListener('hashchange', () => {
   // Skip-link targets must keep their native focus behavior.
   if (location.hash !== '#main') render(true);
 });
-render();
+render(location.hash === '#about' || location.hash === '#contact');

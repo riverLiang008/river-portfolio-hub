@@ -40,3 +40,14 @@ export const profile = {
   bio: '',
   contacts: [] as { label: string; url: string }[],
 };
+
+// Replace these fixed placeholders with public URLs when ready.
+// .invalid is reserved and cannot lead to an unrelated real website.
+export const links = {
+  odyssey: 'https://odyssey-demo.invalid/',
+  research: 'https://arxiv.org/abs/2603.20248',
+  river: 'https://riverliang008.github.io/river-writings/',
+  films: 'https://youtube-channel.invalid/',
+  linkedin: 'https://linkedin-profile.invalid/',
+  email: 'hello@example.invalid',
+};
