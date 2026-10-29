@@ -28,9 +28,9 @@ export const expertise = [
     "id": "writing",
     "short": "Writing",
     "title": "Writing & Editorial",
-    "subtitle": "Literature  /  Revision  /  Scripts",
-    "approach": "Treating writing as a process of discovering structure through revision.",
-    "practice": "I draft, select, reorganize, edit, and review texts across essays, fiction, criticism, and video scripts. Editorial decisions consider rhythm, argument, voice, and the intended reader."
+    "subtitle": "Personal Essays / Travel Writing / Interviews & Portraits",
+    "approach": "Starting from lived experiences, scenes, and conversations, I use writing and revision to reflect on personal feelings and understand other people’s experiences and choices.",
+    "practice": "Through River, I curate personal essays, diary entries, travel writing, and accounts of people and conversations, presenting Chinese originals alongside English translations in themed collections. My editorial work includes selecting pieces, removing repetition, refining structure and wording, checking quotations, and adding notes. English translations are produced by ChatGPT, reviewed by me before publication, and credited on each page."
   },
   {
     "id": "film",
