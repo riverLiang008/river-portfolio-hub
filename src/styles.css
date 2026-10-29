@@ -6,3 +6,4 @@
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 .shell{isolation:isolate}
 .contact-emails{list-style:none;margin:28px 0 0;padding:0}.contact-emails .text-link{margin-top:0;margin-bottom:16px;overflow-wrap:anywhere;max-width:100%}
+.wordmark{display:inline-flex;align-items:center;gap:12px}.avatar{display:block;width:44px;height:44px;flex:none;border-radius:50%;overflow:hidden;position:relative;background:#515c66}.avatar img{position:absolute;width:320%;height:auto;max-width:none;left:-66%;top:-74%}@media(max-width:760px){.avatar{width:36px;height:36px}}
