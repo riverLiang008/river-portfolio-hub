@@ -1,12 +1,12 @@
-// Existing copy from the user-selected Figma concept 12 (932:219).
+// Based on Figma concept 12 (932:219), with user-approved copy updates.
 export const expertise = [
   {
     "id": "engineering",
     "short": "Engineering",
     "title": "Software Engineering",
-    "subtitle": "Systems  /  AI Agents  /  Testing",
-    "approach": "Designing software around clear boundaries, observable behavior, and verifiable outcomes.",
-    "practice": "Across embedded software, AI agent development, and automated testing, I work from ambiguous requirements toward implementations that can be tested, revised, and maintained."
+    "subtitle": "Embedded Systems / AI Agents / Human–AI Collaboration",
+    "approach": "Starting from practical needs, I explore system functionality and interaction through prototyping and iteration.",
+    "practice": "I have professional experience developing embedded systems and AI agents. I also independently develop Odyssey, an interactive human–AI collaboration system prototype that explores how people and AI can work together within a shared workflow."
   },
   {
     "id": "design",
