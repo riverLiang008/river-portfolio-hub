@@ -6,6 +6,8 @@ export interface Project {
   status: string;
   tags: string[];
   url?: string;
+  urlLabel?: string;
+  resources?: { label: string; url: string }[];
   citation?: string;
   internalNote?: string;
 }
@@ -16,7 +18,13 @@ export const projects: Project[] = [
     id: 'odyssey', title: 'Odyssey', type: 'Systems & Design',
     description: '围绕人机协作的独立设计探索，以设计文档和交互原型呈现。',
     status: '设计文档与交互原型', tags: ['Human–AI collaboration', 'Interaction design'],
-    internalNote: '公开文档和演示 URL 待提供并核实；不代表可运行的 agent runtime 或 kernel。',
+    url: 'https://riverliang008.github.io/odyssey-architecture/',
+    urlLabel: '设计文档',
+    resources: [
+      { label: '交互演示', url: 'https://shiny-dawn-ff43.houliang008.workers.dev/' },
+      { label: 'Figma UI Design', url: 'https://www.figma.com/design/P3EF9io2DhyhwkNYBVqB5Z/Odyssey-Design?node-id=1-2' },
+    ],
+    internalNote: '公开链接来自用户整理的 Links Collection.md；不代表可运行的 agent runtime 或 kernel。',
   },
   {
     id: 'governance', title: 'Stability of AI Governance Systems', type: 'Research',
@@ -30,7 +38,9 @@ export const projects: Project[] = [
     id: 'river', title: 'River', type: 'Writing & Ideas',
     description: '独立的文学与思想写作项目，内容在单独的网站中组织。',
     status: '独立写作项目', tags: ['Writing', 'Ideas'],
-    internalNote: '公开站点 URL 待提供；不导入或公开私人手稿。',
+    url: 'https://riverliang008.github.io/river-writings/en/',
+    urlLabel: '作品归档',
+    internalNote: '公开链接来自用户整理的 Links Collection.md；不导入或公开私人手稿。',
   },
 ];
 
@@ -41,13 +51,19 @@ export const profile = {
   contacts: [] as { label: string; url: string }[],
 };
 
-// Replace these fixed placeholders with public URLs when ready.
-// .invalid is reserved and cannot lead to an unrelated real website.
+// Public URLs supplied in riverWritings/docs/Links Collection.md.
 export const links = {
-  odyssey: 'https://odyssey-demo.invalid/',
+  odyssey: 'https://riverliang008.github.io/odyssey-architecture/',
+  odysseyDemo: 'https://shiny-dawn-ff43.houliang008.workers.dev/',
+  figma: 'https://www.figma.com/design/P3EF9io2DhyhwkNYBVqB5Z/Odyssey-Design?node-id=1-2',
   research: 'https://arxiv.org/abs/2603.20248',
-  river: 'https://riverliang008.github.io/river-writings/',
-  films: 'https://youtube-channel.invalid/',
-  linkedin: 'https://linkedin-profile.invalid/',
-  email: 'hello@example.invalid',
+  river: 'https://riverliang008.github.io/river-writings/en/',
+  films: '#home/film',
+  linkedin: 'https://www.linkedin.com/in/%E5%8E%9A-%E6%A2%81-771282294/',
+  emails: [
+    'houliang008@gmail.com',
+    'riverhouliang@qq.com',
+    '1306715855@qq.com',
+    'HLIANG008@e.ntu.edu.sg',
+  ],
 };
