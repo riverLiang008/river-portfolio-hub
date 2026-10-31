@@ -57,6 +57,8 @@ export const links = {
   odysseyDemo: 'https://shiny-dawn-ff43.houliang008.workers.dev/',
   figma: 'https://www.figma.com/design/P3EF9io2DhyhwkNYBVqB5Z/Odyssey-Design?node-id=1-2',
   research: 'https://arxiv.org/abs/2603.20248',
+  sstm: 'https://riverliang008.github.io/river-writings/en/literature/thought-experiments/editions/selected-v1/sstm',
+  ad: 'https://riverliang008.github.io/river-writings/en/literature/thought-experiments/editions/selected-v1/ad',
   river: 'https://riverliang008.github.io/river-writings/en/',
   films: '#home/film',
   linkedin: 'https://www.linkedin.com/in/%E5%8E%9A-%E6%A2%81-771282294/',

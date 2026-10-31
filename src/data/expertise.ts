@@ -21,8 +21,8 @@ export const expertise = [
     "short": "Research",
     "title": "Research & Analysis",
     "subtitle": "Research  /  Modeling  /  Theory",
-    "approach": "Moving between observed problems, conceptual models, and evidence.",
-    "practice": "My research work combines literature review, hypothesis construction, analytical methods, and interpretation. SSTM and Agency Dynamic extend this practice into independent conceptual inquiry."
+    "approach": "Starting from observed problems, I explore possible explanations through literature review, conceptual analysis, and modeling.",
+    "practice": "My research practice involves literature review, hypothesis development, and model analysis. Alongside this work, I create SSTM and AD as personal thought experiments, playing with concepts and ideas out of curiosity and for fun. These are personal creative works, rather than formal research."
   },
   {
     "id": "writing",
