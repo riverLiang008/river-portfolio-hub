@@ -60,7 +60,7 @@ export const links = {
   sstm: 'https://riverliang008.github.io/river-writings/en/literature/thought-experiments/editions/selected-v1/sstm',
   ad: 'https://riverliang008.github.io/river-writings/en/literature/thought-experiments/editions/selected-v1/ad',
   river: 'https://riverliang008.github.io/river-writings/en/',
-  films: '#home/film',
+  films: 'https://www.youtube.com/@riverriver4210',
   linkedin: 'https://www.linkedin.com/in/%E5%8E%9A-%E6%A2%81-771282294/',
   emails: [
     'houliang008@gmail.com',

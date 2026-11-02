@@ -60,3 +60,5 @@ npm run build -- --base=/river-portfolio-hub/
 已依据用户提供的 riverWritings/docs/Links Collection.md 接入 Odyssey Docs、Demo、Figma UI Design、Research、River 英文作品归档和 LinkedIn。Contact 在未提供公开邮箱时使用 LinkedIn；Films 仍指向站内制作状态。
 
 Contact 已按用户确认加入四个公开邮箱，以用户提供顺序展示，并保留 LinkedIn。
+
+2026-11-02：用户提供 YouTube 频道 https://www.youtube.com/@riverriver4210，首页 Films 卡片及 Film & Visual Media 的 YouTube Channel 入口已接入。
