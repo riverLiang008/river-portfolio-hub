@@ -3,6 +3,7 @@ export interface Project {
   title: string;
   type: string;
   description: string;
+  descriptionEn: string;
   status: string;
   tags: string[];
   url?: string;
@@ -12,10 +13,11 @@ export interface Project {
   internalNote?: string;
 }
 
-// 中文文案待审阅确认，确认后再改写为英文。缺失链接仅在数据中记录。
+// 英文介绍基于已确认的中文文案，Work 页同时展示两种语言。
 export const projects: Project[] = [
   {
     id: 'odyssey', title: 'Odyssey', type: 'Systems & Design',
+    descriptionEn: 'An independent design exploration of human–AI collaboration, presented through design documentation and an interactive prototype.',
     description: '围绕人机协作的独立设计探索，以设计文档和交互原型呈现。',
     status: '设计文档与交互原型', tags: ['Human–AI collaboration', 'Interaction design'],
     url: 'https://riverliang008.github.io/odyssey-architecture/',
@@ -28,6 +30,7 @@ export const projects: Project[] = [
   },
   {
     id: 'governance', title: 'Stability of AI Governance Systems', type: 'Research',
+    descriptionEn: 'Research on the coupled dynamics of public trust and social disruptions, and the stability of AI governance systems.',
     description: '研究公众信任与社会争议之间的耦合动态，以及 AI 治理系统的稳定性。',
     status: 'arXiv 预印本', tags: ['AI governance', 'Dynamical systems'],
     url: 'https://arxiv.org/abs/2603.20248',
@@ -36,6 +39,7 @@ export const projects: Project[] = [
   },
   {
     id: 'river', title: 'River', type: 'Writing & Ideas',
+    descriptionEn: 'An independent literary and philosophical writing project, with works organized on a dedicated website.',
     description: '独立的文学与思想写作项目，内容在单独的网站中组织。',
     status: '独立写作项目', tags: ['Writing', 'Ideas'],
     url: 'https://riverliang008.github.io/river-writings/en/',
@@ -44,6 +48,7 @@ export const projects: Project[] = [
   },
   {
     id: 'films', title: 'Film & Visual Media', type: 'Media',
+    descriptionEn: 'Filmmaking and audiovisual expression.',
     description: '影像创作与视听表达。',
     status: 'YouTube', tags: ['Film', 'Visual Essays'],
     url: 'https://www.youtube.com/@riverriver4210',

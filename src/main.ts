@@ -11,7 +11,8 @@ function projectList() {
   return `<div class="project-list">${projects.map((p, i) => `<article class="project" aria-labelledby="${p.id}">
     <span class="project-number">0${i + 1}</span>
     <div><p class="eyebrow">${escape(p.type)}</p><h3 id="${p.id}">${escape(p.title)}</h3>
-    <p class="project-description">${escape(p.description)}</p>
+    <p class="project-description project-description-en" lang="en">${escape(p.descriptionEn)}</p>
+    <p class="project-description project-description-zh" lang="zh-CN">${escape(p.description)}</p>
     ${p.citation ? `<p class="citation">${escape(p.citation)}</p>` : ''}
     <ul class="tags" aria-label="主题">${p.tags.map(t => `<li>${escape(t)}</li>`).join('')}</ul></div>
     <div class="project-meta"><span>${escape(p.status)}</span>${p.url ? `<a class="text-link" href="${escape(p.url)}">${escape(p.urlLabel ?? '阅读预印本')} <span aria-hidden="true">↗</span></a>` : ''}${(p.resources ?? []).map(resource => `<a class="text-link" href="${escape(resource.url)}">${escape(resource.label)} ↗</a>`).join('')}</div>
