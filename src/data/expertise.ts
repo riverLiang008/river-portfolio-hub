@@ -38,14 +38,6 @@ export const expertise = [
     "title": "Film & Visual Media",
     "subtitle": "Filming  /  Lighting  /  Editing  /  Motion",
     "approach": "Translating abstract ideas into an audiovisual rhythm.",
-    "practice": "My ongoing film practice brings together scripting, framing, lighting, recording, editing, and light motion. These are developing capabilities documented through production rather than claimed as specializations."
-  },
-  {
-    "id": "communication",
-    "short": "Communication",
-    "title": "Communication",
-    "subtitle": "Storytelling  /  Public Expression",
-    "approach": "Choosing a form of explanation that fits both the idea and the audience.",
-    "practice": "I use written arguments, visual diagrams, product demonstrations, and narrated video to communicate complex concepts. The goal is clarity without losing nuance."
+    "practice": "My ongoing film practice brings together scripting, framing, lighting, recording, editing, and light motion."
   }
 ];
