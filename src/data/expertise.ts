@@ -10,11 +10,11 @@ export const expertise = [
   },
   {
     "id": "design",
-    "short": "Product & Design",
-    "title": "Product & Design",
-    "subtitle": "UI/UX  /  Architecture  /  Identity",
-    "approach": "Making complex systems understandable without flattening their underlying logic.",
-    "practice": "In Odyssey, I explore how visual workflows, textual representations, and human–AI collaboration can coexist. Interaction choices are tested against the conceptual model, not treated as decoration."
+    "short": "Product & Visual Design",
+    "title": "Product & Visual Design",
+    "subtitle": "Interaction / UI / Visual Identity",
+    "approach": "Starting from a product’s concept and use, I explore how interaction, interfaces, and visual language can make complex information and functionality easier to understand and use.",
+    "practice": "My design practice spans the Odyssey Mark, product interaction and interfaces, and my portfolio website. I explore how product concepts can take shape as visual symbols, workflows, and page layouts, bringing function, form, and content into a coherent experience."
   },
   {
     "id": "research",

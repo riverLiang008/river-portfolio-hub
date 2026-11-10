@@ -53,6 +53,8 @@ export const profile = {
 
 // Public URLs supplied in riverWritings/docs/Links Collection.md.
 export const links = {
+  odysseyMark: 'https://riverliang008.github.io/odyssey-architecture/design-evolution/odyssey-mark',
+  portfolioDesign: 'https://youtu.be/ltQGNhfGXwY?si=PcRkcRHPJ68-_yBv',
   odyssey: 'https://riverliang008.github.io/odyssey-architecture/',
   odysseyDemo: 'https://shiny-dawn-ff43.houliang008.workers.dev/',
   figma: 'https://www.figma.com/design/P3EF9io2DhyhwkNYBVqB5Z/Odyssey-Design?node-id=1-2',
