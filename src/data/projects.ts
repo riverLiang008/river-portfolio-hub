@@ -42,6 +42,13 @@ export const projects: Project[] = [
     urlLabel: '作品归档',
     internalNote: '公开链接来自用户整理的 Links Collection.md；不导入或公开私人手稿。',
   },
+  {
+    id: 'films', title: 'Film & Visual Media', type: 'Media',
+    description: '影像创作与视听表达。',
+    status: 'YouTube', tags: ['Film', 'Visual Essays'],
+    url: 'https://www.youtube.com/@riverriver4210',
+    urlLabel: 'YouTube Channel',
+  },
 ];
 
 export const profile = {
