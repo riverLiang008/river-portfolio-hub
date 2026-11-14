@@ -48,6 +48,6 @@ export const expertise = [
     "title": "Film & Visual Media",
     "subtitle": "Filming  /  Lighting  /  Editing  /  Motion",
     "approach": "Translating abstract ideas into an audiovisual rhythm.",
-    "practice": "My ongoing film practice brings together scripting, framing, lighting, recording, editing, and light motion."
+    "practice": "I completed my first short film, Preface, taking on writing, directing, acting, and production for the first time. An accompanying behind-the-scenes documentary traces the creative process, from the initial concept and visual analysis to shot planning, character design, and filming. This experiment in bringing an idea to life through visual storytelling marks the beginning of my exploration of filmmaking."
   }
 ];
