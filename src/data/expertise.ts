@@ -2,6 +2,8 @@
 export const expertise = [
   {
     "id": "engineering",
+    "image": "images/fields/01-2.png",
+    "imageAlt": "Odyssey workflow canvas with connected nodes and available tools",
     "short": "Engineering",
     "title": "Software Engineering",
     "subtitle": "Embedded Systems / AI Agents / Human–AI Collaboration",
@@ -10,6 +12,8 @@ export const expertise = [
   },
   {
     "id": "design",
+    "image": "images/fields/02-1.png",
+    "imageAlt": "Odyssey visual identity with its four-color geometric mark",
     "short": "Product & Visual Design",
     "title": "Product & Visual Design",
     "subtitle": "Interaction / UI / Visual Identity",
@@ -18,6 +22,8 @@ export const expertise = [
   },
   {
     "id": "research",
+    "image": "images/fields/03-2.jpg",
+    "imageAlt": "Model chart comparing power and role distance across four historical figures",
     "short": "Research",
     "title": "Research & Analysis",
     "subtitle": "Research  /  Modeling  /  Theory",
@@ -26,6 +32,8 @@ export const expertise = [
   },
   {
     "id": "writing",
+    "image": "images/fields/04-1.png",
+    "imageAlt": "River writing archive and selected literary works",
     "short": "Writing",
     "title": "Writing & Editorial",
     "subtitle": "Personal Essays / Travel Writing / Interviews & Portraits",
@@ -34,6 +42,8 @@ export const expertise = [
   },
   {
     "id": "film",
+    "image": "images/fields/05-1.png",
+    "imageAlt": "Black-and-white still from Preface featuring a woman outdoors",
     "short": "Film",
     "title": "Film & Visual Media",
     "subtitle": "Filming  /  Lighting  /  Editing  /  Motion",
