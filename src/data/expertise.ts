@@ -48,6 +48,6 @@ export const expertise = [
     "title": "Film & Visual Media",
     "subtitle": "Filming  /  Lighting  /  Editing  /  Motion",
     "approach": "Translating abstract ideas into an audiovisual rhythm.",
-    "practice": "I completed my first short film, Preface, taking on writing, directing, acting, and production for the first time. An accompanying behind-the-scenes documentary traces the creative process, from the initial concept and visual analysis to shot planning, character design, and filming. This experiment in bringing an idea to life through visual storytelling marks the beginning of my exploration of filmmaking."
+    "practice": "I explore visual storytelling through short films, animation, and motion design.\n\nMy first short film, *Preface*, brought together writing, directing, acting, and filming, accompanied by a behind-the-scenes documentary.\n\nIn *The Cost of Attention*, I experimented with original hand-drawn characters and animation to visualize abstract ideas about human relationships, influence, and freedom."
   }
 ];

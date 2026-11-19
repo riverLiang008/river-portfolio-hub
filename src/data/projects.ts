@@ -77,6 +77,7 @@ export const links = {
   blueBicycle: 'https://riverliang008.github.io/river-writings/en/literature/a-cloud/editions/selected-v1/blue-bicycle',
   thoughtAndThought: 'https://riverliang008.github.io/river-writings/en/literature/a-cloud/editions/selected-v1/thought-and-thought',
   preface: 'https://youtu.be/y1BpnuOXIq0?si=qs_LqmgKhi8ibEox',
+  costOfAttention: 'https://youtu.be/17qtAgI7Lq0?si=lU2sqSqjaZGRVWik',
   films: 'https://www.youtube.com/@riverriver4210',
   linkedin: 'https://www.linkedin.com/in/%E5%8E%9A-%E6%A2%81-771282294/',
   emails: [
